@@ -1,0 +1,70 @@
+<!--
+Statistics 2023/2024
+Homework 1
+
+Leonardo Brugnano
+2128518
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hw-2.2</title>
+</head>
+<body>
+  <!-- define a 400x400px canvas on which we will draw -->
+  <canvas id="myCanvas" width="800" height="400"></canvas>
+  <script>
+    // retrieve canvas to draw on it
+    var canvas = document.getElementById("myCanvas");
+  // retrieve context library to draw 2D graphics
+    var ctx = canvas.getContext("2d");
+
+
+    /* POINT */
+
+  // start drawing something new
+    ctx.beginPath();
+    // point is a small circle filled in black
+    ctx.arc(50, 100, 2, 0, Math.PI * 2);
+    ctx.fillStyle = "black";
+  // draw the point
+    ctx.fill();
+
+
+    /*  LINE */
+  
+  // start drawing something new
+    ctx.beginPath();
+    // start and end points of the line
+    ctx.moveTo(100, 100);
+    ctx.lineTo(250, 100);
+    // line style
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+    // draw the line
+    ctx.stroke();
+
+
+    /* CIRCLE */
+
+  // start drawing something new
+    ctx.beginPath();
+    // define a circumference
+    ctx.arc(350, 100, 50, 0, Math.PI * 2);
+    // fill the inside
+    ctx.fillStyle = "black";
+  // draw the circle
+    ctx.fill();
+
+
+    /* RECTANGLE */
+
+  // start drawing something new
+    ctx.beginPath();
+  // rectangle style and dimension
+    ctx.fillStyle = "black";
+    ctx.fillRect(460, 50, 150, 100);
+  </script>
+</body>
+</html>
